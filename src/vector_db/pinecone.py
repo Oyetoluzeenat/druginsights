@@ -27,7 +27,7 @@ class PineconeDB:
         self.vectorstore = PineconeVectorStore(
             index_name=PC_INDEX_NAME,
             embedding=EMBEDDINNGS,
-            pinecone_api_key = st.secrets.pinecone_api_key
+            pinecone_api_key = st.secrets["pinecone"]["api_key"]
         )
 
     def _create_index(self, *args, **kwarg) -> None:
