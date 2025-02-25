@@ -10,7 +10,7 @@ from pinecone import Pinecone, ServerlessSpec
 
 load_dotenv(".env")
 
-Pinecone(api_key=st.secrets.pinecone_api_key)
+Pinecone(api_key=st.secrets["pinecone"]["api_key"])
 pc_index_name = st.secrets.pc_index_name
 
 EMBEDDINNGS = AzureOpenAIEmbeddings(
