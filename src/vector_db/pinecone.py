@@ -8,14 +8,14 @@ from pinecone import Pinecone, ServerlessSpec
 
 load_dotenv(".env")
 
-PC = Pinecone(api_key="cad7fe38-7644-43a6-85e6-a50f6dfa95b3")
-PC_INDEX_NAME = "axum-druginsights"
+PC = Pinecone(api_key= st.secrets.api_key)
+PC_INDEX_NAME = st.secrets.pc_index_name
 
 EMBEDDINNGS = AzureOpenAIEmbeddings(
-    azure_endpoint="https://axum.openai.azure.com/",
-    api_key= "b6c9c4d99c7e454d981ccb83f811544a",
-    azure_deployment="axum-text-embed-ada",
-    openai_api_version="2024-02-01"
+    azure_endpoint=st.secrets.azure_endpoint,
+    api_key= st.secrets.api_key,
+    azure_deployment=st.secrets.azure_deploment,
+    openai_api_version=st.secrets.openai_api_version
 )
 
 class PineconeDB:
@@ -25,7 +25,7 @@ class PineconeDB:
         self.vectorstore = PineconeVectorStore(
             index_name=PC_INDEX_NAME,
             embedding=EMBEDDINNGS,
-            pinecone_api_key = "cad7fe38-7644-43a6-85e6-a50f6dfa95b3"
+            pinecone_api_key = st.secrets.pinecone_api_key
         )
 
     def _create_index(self, *args, **kwarg) -> None:

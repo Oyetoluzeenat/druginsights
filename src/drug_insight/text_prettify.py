@@ -13,11 +13,10 @@ from pydantic.v1 import ValidationError
 
 load_dotenv(".env")
 
-openai_api_version = "2024-02-01"
-azure_deployment = "axum-gpt-4o"
-api_key = "b6c9c4d99c7e454d981ccb83f811544a"
-azure_endpoint = "https://axum.openai.azure.com/"
-
+openai_api_version=st.secrets.openai_api_version,
+azure_deployment=st.secrets.azure_deployment,
+api_key = st.secrets.api_key,
+azure_endpoint = st.secrets.azure_endpoint
 
 def prettify_text(doc_dir: str, output_dir: str):
     """
