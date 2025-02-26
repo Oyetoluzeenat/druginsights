@@ -10,14 +10,14 @@ from pinecone import Pinecone, ServerlessSpec
 
 load_dotenv(".env")
 
-Pinecone(api_key=st.secrets["pinecone"]["api_key"])
-pc_index_name = st.secrets.pc_index_name
+PC=Pinecone(api_key=st.secrets["pinecone"]["api_key"])
+PC_INDEX_NAME = st.secrets["pinecone"]["index_name"]
 
 EMBEDDINNGS = AzureOpenAIEmbeddings(
-    azure_endpoint=st.secrets.azure_endpoint,
-    api_key= st.secrets.api_key,
-    azure_deployment2=st.secrets.azure_deployment2,
-    openai_api_version=st.secrets.openai_api_version
+            openai_api_version=st.secrets["openai"]["api_version"],
+            azure_deployment1=st.secrets["openai"]["azure_deployment1"],
+            api_key = st.secrets["openai"]["api_key"],
+            azure_endpoint = st.secrets["openai"]["azure_endpoint"]
 )
 
 class PineconeDB:

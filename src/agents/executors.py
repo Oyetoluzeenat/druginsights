@@ -41,10 +41,10 @@ class ChatAndRetrievalExecutor:
         context_prompt: str = CONTEXTUALIZE_Q_SYSTEM_PROMPT,
     ) -> None:
         self.llm = AzureChatOpenAI(
-            openai_api_version=st.secrets.openai_api_version,
-            azure_deployment1=st.secrets.azure_deployment1,
-            api_key = st.secrets.api_key,
-            azure_endpoint = st.secrets.azure_endpoint
+            openai_api_version=st.secrets["openai"]["api_version"],
+            azure_deployment=st.secrets["openai"]["azure_deployment1"],
+            api_key = st.secrets["openai"]["api_key"],
+            azure_endpoint = st.secrets["openai"]["azure_endpoint"]
             )
         self.msgs = StreamlitChatMessageHistory()
         self.memory = ConversationBufferMemory(
