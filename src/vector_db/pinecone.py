@@ -15,7 +15,7 @@ PC_INDEX_NAME = st.secrets["pinecone"]["index_name"]
 
 EMBEDDINNGS = AzureOpenAIEmbeddings(
             openai_api_version=st.secrets["openai"]["api_version"],
-            azure_deployment1=st.secrets["openai"]["azure_deployment1"],
+            azure_deployment=st.secrets["openai"]["azure_deployment1"],
             api_key = st.secrets["openai"]["api_key"],
             azure_endpoint = st.secrets["openai"]["azure_endpoint"]
 )
