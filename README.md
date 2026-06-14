@@ -56,6 +56,6 @@ pip install -e .
 - [Favour Madubuko](https://github.com/favouralgo/)
 - [Taofeeq Togunwa](https://github.com/Taofeeq-T)
 - Samuel Oyatoye
-- Zeenat Oyetolu
+- [Zeenat Oyetolu](https://github.com/Oyetoluzeenat)
 - [Abimbola Adebakin](https://www.linkedin.com/in/abimbolaadebakin)
 - [Advantage Health Africa](https://advantagehealthafrica.com/)
