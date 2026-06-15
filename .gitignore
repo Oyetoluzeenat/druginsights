@@ -164,3 +164,6 @@ src/version.py
 .lancedb/
 config.json
 .DS_Store
+
+# Streamlit
+secrets.toml

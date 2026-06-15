@@ -33,12 +33,15 @@ We are [Axum AI](https://axumai.org/) leveraging AI and Tech to empower Africa a
 ## Dev Setup
 
 - Install conda environment
+conda create druginsights
 
 ```bash
 conda install -n druginsights python=3.10
 conda activate druginsights
 pip install -e .
 ```
+
+sre
 
 - Get the [access keys](https://www.notion.so/Setting-up-the-Azure-OpenAI-s-API-access-e9d1d231d2d0499694e955428005d545?pvs=4#319c86b7fd7842039137df3fe28f74880) and save them in a .env file.
 
